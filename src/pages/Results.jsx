@@ -30,26 +30,32 @@ const Results = () => {
     let taxpay = taxrate * income;
 
   return (
-    <div>
-      <h1>Result</h1>
-      <p>
-        <strong>เงินได้ทั้งปี: {salary} บาท</strong>
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+    <div className="bg-white shadow-md rounded-lg p-8 w-full max-w-2xl">
+        <h1 className="text-3xl font-bold text-gray-800 text-center mb-6">
+          ผลการคำนวณภาษี
+        </h1>
+      <div className="space-y-4 text-gray-700">
+        <p className="text-lg">
+        <strong className="text-red-600">เงินได้ทั้งปี: {salary} บาท</strong>
       </p>
-      <p>
-        <strong>ค่าใช้จ่าย: {expenses} บาท</strong>
+      <p className="text-lg">
+        <strong className="text-red-600">ค่าใช้จ่าย: {expenses} บาท</strong>
       </p>
-      <p>
-        <strong>ค่าลดย่อน: {deduction} บาท</strong>
+      <p className="text-lg">
+        <strong className="text-red-600">ค่าลดย่อน: {deduction} บาท</strong>
       </p>
-      <p>
-      <strong>เงินได้พึงประเมินสุทธิ: {income} บาท</strong>
+      <p className="text-lg">
+      <strong className="text-red-600">เงินได้พึงประเมินสุทธิ: {income} บาท</strong>
       </p>
-      <p>
-      <strong>อัตราภาษี: {taxrate} %</strong>
+      <p className="text-lg">
+      <strong className="text-red-600">อัตราภาษี: {taxrate} %</strong>
       </p>
-      <p>
-      <strong>ภาษีที่ต้องชำระ: {taxpay} บาท</strong>
+      <p className="text-lg">
+      <strong className="text-red-600">ภาษีที่ต้องชำระ: {taxpay} บาท</strong>
       </p>
+      </div>
+    </div>
     </div>
   );
 };
